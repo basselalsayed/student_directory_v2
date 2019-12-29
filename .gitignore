@@ -18,4 +18,4 @@ lib/csv.rb
 lib/print.rb
 spec/csv_spec.rb
 spec/print_spec.rb
-.rubocop.yml
+.rubocop.ymldirectory.rb
