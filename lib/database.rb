@@ -14,7 +14,7 @@ include Curses
   end
 
   def print_by_cohort(cohort)
-    # category_invalid('cohort', cohort)
+    category_invalid('cohort', cohort)
     print('cohort', cohort)
   end
 
@@ -27,10 +27,10 @@ include Curses
     print('true', 'all')
   end
 
-  # private
+  private
 
   def category_invalid(category, selection)
-    raise "No matches found" if search(category, selection).nil?
+    raise "No matches found" if search(category, selection).empty?
   end
 
   def print_header
@@ -46,10 +46,7 @@ include Curses
   end
 
   def search(category, selection)
-    @students.find { |student|
-      category == 'cohort' ? category = student.cohort : category = student.name[0]
-      selection == category.downcase
-    }
+    category == 'cohort' ? cohort_selection(selection) : name_selection(selection)
   end
 
   def to_print(category, selection)
