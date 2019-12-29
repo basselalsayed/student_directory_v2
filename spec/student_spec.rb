@@ -6,10 +6,10 @@ describe Student do
 
   describe '#initialization' do 
     it 'automaticaly sets the cohort as november' do 
-      expect(subject.details).to eq(["Tony", :november])
+      expect(subject.name).to eq "Tony"
     end
     it 'allows cohort to be overwritten' do 
-      expect(subject2.details).to eq(["Tony", :december])
+      expect(subject2.cohort).to eq 'December'
     end
   end
 end
