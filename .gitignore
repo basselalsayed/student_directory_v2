@@ -13,7 +13,6 @@ temp.rb
 typos.rb
 directory_copy.rb
 directory_copy_spec.rb
-run_program.rb
 lib/csv.rb
 lib/print.rb
 spec/csv_spec.rb
