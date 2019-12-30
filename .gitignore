@@ -20,3 +20,5 @@ spec/csv_spec.rb
 spec/print_spec.rb
 .rubocop.yml
 directory.rb
+test.csv
+testing.csv

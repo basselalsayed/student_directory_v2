@@ -2,8 +2,8 @@ require_relative 'student'
 require 'curses'
 
 class DataBase
-attr_reader :students
-include Curses
+  include Curses
+  attr_reader :students
 
   def initialize(students = [])
     @students = students
@@ -24,7 +24,7 @@ include Curses
   end
 
   def print_all
-    print('true', 'all')
+    print('all', 'true')
   end
 
   private
@@ -33,9 +33,8 @@ include Curses
     raise "No matches found" if search(category, selection).empty?
   end
 
-  def print_header
-    puts "The students of Villains Academy".center(Curses::cols)
-    puts "----------------------".center(Curses::cols)
+  def search(category, selection)
+    category == 'cohort' ? cohort_selection(selection) : name_selection(selection)
   end
 
   def print(category, selection)
@@ -45,8 +44,9 @@ include Curses
     print_footer
   end
 
-  def search(category, selection)
-    category == 'cohort' ? cohort_selection(selection) : name_selection(selection)
+  def print_header
+    puts "The students of Villains Academy".center(Curses::cols)
+    puts "----------------------".center(Curses::cols)
   end
 
   def to_print(category, selection)
