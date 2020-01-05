@@ -12,7 +12,7 @@ The student directory script allows you to manage the list of students enrolled 
   
 * As a user, I would like the program to load from a defualt csv. 
   
-* As a user, I would like the program to load from a defualt csv. 
+* As a user, I would like the program to load from a given csv. 
 
 ## How to use ##
 
